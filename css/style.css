@@ -176,29 +176,39 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 188px 0;
+  padding: 72px 0;
   flex-shrink: 0;
-  max-width: 1440px;
+  max-width: 767px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/people-office-mob.jpg);
+}
+@media screen and (min-resolution: 192dpi) {
+  .here-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob@2x.jpg);
+  }
 }
 
 /* title */
 .here-title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   margin-top: 0;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 496px;
+  max-width: 216px;
 }
 /* button */
 .here-btn {
@@ -224,6 +234,59 @@ img {
 .here-btn:focus {
   background-color: #404bbf;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .here-section {
+    padding: 112px 0;
+    max-width: 1157px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab.jpg);
+  }
+  @media screen and (min-resolution: 192dpi) {
+    .here-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-tab@2x.jpg);
+    }
+  }
+  .here-title {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    max-width: 496px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .here-section {
+    padding: 188px 0;
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-deskt.jpg);
+  }
+  @media screen and (min-resolution: 192dpi) {
+    .here-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-deskt@2x.jpg);
+    }
+  }
+  .here-title {
+    margin-bottom: 48px;
+  }
 }
 
 /* advantages */
@@ -537,12 +600,10 @@ img {
 .footer-page-container {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
   justify-content: center;
   gap: 72px;
 }
 .footer-block-logo {
-  /* margin-right: 120px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -571,7 +632,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .text-social {
   color: #ffffff;
@@ -610,11 +671,9 @@ img {
 /* Subscribe  */
 
 .subscribe {
-  /* margin-left: 80px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
 }
 .sub-text {
   color: var(--WHITE, #fff);
@@ -653,7 +712,8 @@ img {
   color: #fff;
 }
 .sub-btn {
-  flex-direction: column;
+  display: flex;
+  /* flex-direction: column; */
   color: var(--WHITE, #fff);
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -661,8 +721,8 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  /* padding: 8px 24px; */
-  min-width: 165px;
+  padding: 8px 24px;
+  width: 165px;
   height: 40px;
   justify-content: center;
   align-items: center;
@@ -675,22 +735,12 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon-sub {
-  margin-left: 16px;
+  /* margin-left: 16px; */
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
-    padding: 92px 0;
-  }
-  .footer-block-logo {
-    align-items: start;
-  }
-  .footer-block-social {
-    align-items: start;
-  }
   .footer-page-container {
     align-items: baseline;
-    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 72px;
@@ -698,17 +748,43 @@ img {
     margin-left: 108px;
     justify-content: start;
   }
+  .footer-block-logo {
+    align-items: start;
+  }
+  .footer-block-social {
+    align-items: start;
+  }
   .subscribe {
     align-items: start;
   }
+
   .input-email {
     width: 264px;
+  }
+  .sub-form {
+    flex-direction: row;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer {
     padding: 100px 0;
+  }
+  .subscribe {
+    margin-left: 80px;
+  }
+  .footer-page-container {
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    gap: unset;
+  }
+  .footer-block-logo {
+    margin-right: 120px;
+  }
+  .subscribe {
+    justify-content: center;
   }
 }
 
