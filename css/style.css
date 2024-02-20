@@ -183,6 +183,11 @@ img {
   .contact-link {
     flex-direction: column;
     gap: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -192,6 +197,9 @@ img {
   .contact-link {
     flex-direction: row;
     gap: 40px;
+    font-size: 16px;
+    line-height: 1.5%;
+    letter-spacing: 0.02em;
   }
 }
 /* <!-- Menu - mob -- >  */
@@ -665,7 +673,7 @@ img {
 /* our Portfolio */
 
 .portfolio-section {
-  padding-bottom: 96px 0;
+  padding: 96px 0;
 }
 .section-portfolio-title {
   color: var(--NAVY-BLUE, #2e2f42);
